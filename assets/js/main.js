@@ -95,10 +95,26 @@ console.log(parolaInvesa(parolaUtente));
 // Dividi in due array separati le zucchine che misuranovmeno o più di 15cm.
 // Infine stampa separatamente quanto pesano i due gruppi di zucchine
 
-var zucchinePiccole = 0;
-var zucchineGrandi = 0;
+//ho riutilizzato le zucchine del primo JSnack
+var zucchinePiccole = [];
+var zucchineGrandi = [];
 
 var lunghezzaZucchine = 0;
 for (const key in zucchine) {
-    lunghezzaZucchine += zucchine[key].lunghezza;
+    if (zucchine[key].lunghezza < 15) {
+        zucchinePiccole.push(zucchine[key]);
+    } else {
+        zucchineGrandi.push(zucchine[key]);
+    }
 }
+
+var sommaLunghezzaPiccole = 0;
+for (const key in zucchinePiccole) {
+    sommaLunghezzaPiccole += zucchinePiccole[key].lunghezza;
+}
+console.log('lunghezza zucchine piccole = ' + sommaLunghezzaPiccole);
+var sommaLunghezzaGrandi = 0;
+for (const key in zucchineGrandi) {
+    sommaLunghezzaGrandi += zucchineGrandi[key].lunghezza;
+}
+console.log('lunghezza zucchine grandi = ' + sommaLunghezzaGrandi);
