@@ -1,8 +1,6 @@
 // JSnack 1
 
-// Crea 10 oggetti che rappresentano una zucchina,
-// indicando per ognuna varietà, peso e lunghezza.
-// Calcola quanto pesano tutte le zucchine.
+// Crea 10 oggetti che rappresentano una zucchina, indicando per ognuna varietà, peso e lunghezza. Calcola quanto pesano tutte le zucchine.
 
 var zucchinaUno = {
     varietà : 'uno',
@@ -73,3 +71,18 @@ for (const key in zucchine) {
     pesoZucchine += zucchine[key].peso;
 }
 console.log('peso zucchine = ' + pesoZucchine);
+
+///////////////////////////////////////////////
+
+// JSnack 2
+
+// Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
+
+var parolaUtente = prompt('inserisci una parola per riaverla al contrario');
+
+function parolaInvesa(parola) {
+    var parolaInvertita = parola.split('').reverse().join(''); 
+    return parolaInvertita;
+}
+
+console.log(parolaInvesa(parolaUtente));
