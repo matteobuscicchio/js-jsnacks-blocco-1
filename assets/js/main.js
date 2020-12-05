@@ -118,3 +118,43 @@ for (const key in zucchineGrandi) {
     sommaLunghezzaGrandi += zucchineGrandi[key].lunghezza;
 }
 console.log('lunghezza zucchine grandi = ' + sommaLunghezzaGrandi);
+
+///////////////////////////////////////////////
+
+// JSnack 4
+
+// Scrivi una funzione che fonda due array (con lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro
+// es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+var randomNumber = Math.floor(Math.random() * "5") + 2;
+function arrayUnoFunction() {
+    var arrayUno = [];
+    for (var index = 0; index < randomNumber; index++) {
+        var chiediElemento = prompt("inserisci un elemento fino al completamento del primo array");
+        arrayUno.push(chiediElemento);   
+    }
+    console.log(arrayUno);
+    return arrayUno;
+}
+function arrayDueFunction() {
+    var arrayDue = [];
+    for (var index = 0; index < randomNumber; index++) {
+        var chiediElemento = prompt("inserisci un elemento fino al completamento del secondo array");
+        arrayDue.push(chiediElemento);   
+    }
+    console.log(arrayDue);
+    return arrayDue;
+}
+function arrayMischiati(primo, secondo){
+  var primo;
+  var secondo;
+  var arrayMisto = [];
+  var index = 0;
+  while (index < primo.length) {
+    arrayMisto.push(primo[index]);
+    arrayMisto.push(secondo[index]);
+    index++;
+  }
+  return arrayMisto;
+}
+console.log(arrayMischiati(arrayUnoFunction(), arrayDueFunction()));
