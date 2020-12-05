@@ -78,7 +78,7 @@ console.log('peso zucchine = ' + pesoZucchine);
 
 // Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
 
-var parolaUtente = prompt('inserisci una parola per riaverla al contrario');
+var parolaUtente = new String(prompt('inserisci una stringa per riaverla al contrario'));
 
 function parolaInvesa(parola) {
     var parolaInvertita = parola.split('').reverse().join(''); 
@@ -86,3 +86,19 @@ function parolaInvesa(parola) {
 }
 
 console.log(parolaInvesa(parolaUtente));
+
+///////////////////////////////////////////////
+
+// JSnack 3
+
+// Crea 10 oggetti che rappresentano una zucchina.
+// Dividi in due array separati le zucchine che misuranovmeno o più di 15cm.
+// Infine stampa separatamente quanto pesano i due gruppi di zucchine
+
+var zucchinePiccole = 0;
+var zucchineGrandi = 0;
+
+var lunghezzaZucchine = 0;
+for (const key in zucchine) {
+    lunghezzaZucchine += zucchine[key].lunghezza;
+}
